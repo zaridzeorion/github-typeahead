@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
+import { GET } from "./fetch.js";
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState("");
+  const BASE_URL = `https://api.github.com/users`;
 
   useEffect(() => {
-    let BASE_URL = `https://api.github.com/users`;
-    fetch(BASE_URL)
-      .then((response) => response.json())
-      .then((data) => setUsers(data));
+    GET(BASE_URL).then((res) => setUsers(res));
   }, []);
 
-  return <ul>{users && users.map((user) => <li key={user.id}>{user.login}</li>)}</ul>;
+  return (
+    <ul>
+      {users
+        ? users.map((user) => <li key={user.id}>{user.login}</li>)
+        : "Loading..."}
+    </ul>
+  );
 }
 
 export default App;
