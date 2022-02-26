@@ -1,0 +1,23 @@
+.Loader,
+.Loader:after {
+  border-radius: 50%;
+  width: 20em;
+  height: 20em;
+}
+.Loader {
+  margin: 2.5em auto;
+  font-size: 0.1em;
+  position: relative;
+  border: 1.1em solid var(--dark-color);
+  border-left: 1.1em solid var(--light-color);
+  animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

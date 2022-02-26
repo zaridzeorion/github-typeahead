@@ -1,4 +1,5 @@
 import React from "react";
+import Loader from "./Loader";
 import "../styles/users.css";
 
 const Users = ({ users }) => {
@@ -21,7 +22,9 @@ const Users = ({ users }) => {
           </li>
         ))
       ) : (
-        <li className="Empty-message">Loading</li>
+        <li className="Empty-message">
+          <Loader />
+        </li>
       )}
 
       {users && users.length === 0 && (
