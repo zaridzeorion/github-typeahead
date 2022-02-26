@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { GET } from "../fetch";
+import "../styles/typeahead.css";
 
 const GithubTypeahead = ({ setData, user_per_page = 5 }) => {
   const [input, setInput] = useState("");
-  const BASE_URL = `https://api.github.com/search/users?q=${input}+in:login,${input}+in:name&${user_per_page}`;
+  const BASE_URL = `https://api.github.com/search/users?q=${input}+in:login,${input}+in:name&per_page=${user_per_page}`;
 
   useEffect(() => {
     // Debouncing - delaying function
@@ -15,10 +16,11 @@ const GithubTypeahead = ({ setData, user_per_page = 5 }) => {
       setData("");
       clearTimeout(timeoutId);
     };
-  }, [BASE_URL, input]);
+  }, [input]);
 
   return (
     <input
+      className="Typeahead-input"
       type="text"
       placeholder="Search..."
       value={input}

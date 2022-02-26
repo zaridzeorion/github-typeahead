@@ -1,18 +1,32 @@
 import React from "react";
+import "../styles/users.css";
 
 const Users = ({ users }) => {
   return (
-    <ul>
-      {users
-        ? users.map((user) => (
-            <li key={user.id}>
-              <img src={user.avatar_url} />
-              <p>{user.login} </p>
-            </li>
-          ))
-        : "Loading..."}
+    <ul className="Users">
+      {users ? (
+        users.map((user) => (
+          <li className="User" key={user.id}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={`https://github.com/${user.login}`}
+            >
+              <img alt={`${user.login}'s avatar`} src={user.avatar_url} />
+              <p className="Username">
+                <span className="asperand">@</span>
+                {user.login}
+              </p>
+            </a>
+          </li>
+        ))
+      ) : (
+        <li className="Empty-message">Loading</li>
+      )}
 
-      {users && users.length === 0 && <li>"No suggestions."</li>}
+      {users && users.length === 0 && (
+        <li className="Empty-message">User not found.</li>
+      )}
     </ul>
   );
 };
