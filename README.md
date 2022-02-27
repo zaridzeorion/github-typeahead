@@ -4,6 +4,9 @@ Typeahead, in general, is an autocompletion or autosuggestion - language predict
 
 Github typeahead, specifically, is autosuggestion tool for searching Github users. 
 
+## How project looks
+![chrome-capture-2022-1-27](https://user-images.githubusercontent.com/72822578/155897416-0080349e-c7ed-41ca-a950-4a33b08312f0.gif)
+
 ## Installation and Setup Instructions
 
 Download or clone down this repository. You will need `node` and `npm` installed globally on your machine.  
