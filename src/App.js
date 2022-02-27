@@ -7,7 +7,7 @@ function App() {
   const [users, setUsers] = useState("");
 
   return (
-    <div className="App">
+    <div className="Typeahead">
       <GithubTypeahead setData={setUsers} />
       <Users users={users} />
     </div>
