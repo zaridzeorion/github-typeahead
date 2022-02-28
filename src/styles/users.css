@@ -3,11 +3,12 @@
   position: absolute;
   top: 95%;
   left: 2.5%;
-  margin-top: 2px;
+  margin-top: 3px;
   overflow: hidden;
   border-radius: 0 0 8px 8px;
   outline: none;
-  box-shadow: -1px 10px 10px var(--dark-color);
+  -webkit-box-shadow: -1px 10px 10px var(--dark-color);
+          box-shadow: -1px 10px 10px var(--dark-color);
   background-color: var(--dark-color);
   display: none;
 }
@@ -20,6 +21,8 @@
   position: relative;
   padding: 8px;
   cursor: pointer;
+  -webkit-transition: 0.1s ease-out;
+  -o-transition: 0.1s ease-out;
   transition: 0.1s ease-out;
 }
 
