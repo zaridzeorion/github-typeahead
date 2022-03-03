@@ -4,7 +4,7 @@
 
 .Typeahead {
   position: relative;
-  width: 300px;
+  width: 400px;
   margin: 50px auto 0 auto;
   border-radius: 10px;
   -webkit-transition: 0.2s ease;
@@ -13,7 +13,7 @@
 }
 
 .Typeahead:focus-within {
-  width: 450px;
+  width: 550px;
 }
 
 @media only screen and (max-width: 450px) {
@@ -26,8 +26,7 @@
 }
 
 @media only screen and (max-width: 300px) {
-  .Typeahead,
-  .Typeahead:focus-within {
+  .Typeahead .Typeahead:focus-within {
     width: 250px;
   }
 }
@@ -35,7 +34,7 @@
 .Typeahead-input {
   width: 100%;
   padding: 0.1px 8px;
-  font-size: 15px;
+  font-size: 1em;
   line-height: 30px;
   border: none;
   outline: none;

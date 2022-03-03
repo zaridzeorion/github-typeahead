@@ -8,7 +8,7 @@
   border-radius: 0 0 8px 8px;
   outline: none;
   -webkit-box-shadow: -1px 10px 10px var(--dark-color);
-          box-shadow: -1px 10px 10px var(--dark-color);
+  box-shadow: -1px 10px 10px var(--dark-color);
   background-color: var(--dark-color);
   display: none;
 }
@@ -38,12 +38,12 @@
   position: absolute;
   top: 8px;
   left: 8px;
-  width: 52px;
-  height: 52px;
+  width: 75px;
+  height: 75px;
   border-radius: 5px;
 }
 
 .User .Username {
-  min-height: 60px;
-  padding-left: 60px;
+  min-height: 80px;
+  padding-left: 80px;
 }
