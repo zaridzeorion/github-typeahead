@@ -17,6 +17,10 @@
   display: block;
 }
 
+.Users a {
+  color: var(--light-color);
+}
+
 .User {
   position: relative;
   padding: 8px;
@@ -24,10 +28,6 @@
   -webkit-transition: 0.1s ease-out;
   -o-transition: 0.1s ease-out;
   transition: 0.1s ease-out;
-}
-
-.User a {
-  color: var(--light-color);
 }
 
 .User:hover {

@@ -7,19 +7,19 @@ const Users = ({ users }) => {
     <ul className="Users">
       {users ? (
         users.map((user) => (
-          <li className="User" key={user.id}>
-            <a
-              rel="noreferrer"
-              target="_blank"
-              href={`https://github.com/${user.login}`}
-            >
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://github.com/${user.login}`}
+          >
+            <li className="User" key={user.id}>
               <img alt={`${user.login}'s avatar`} src={user.avatar_url} />
               <p className="Username">
                 <span className="asperand">@</span>
                 {user.login}
               </p>
-            </a>
-          </li>
+            </li>
+          </a>
         ))
       ) : (
         <li className="Empty-message">
