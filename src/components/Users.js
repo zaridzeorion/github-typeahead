@@ -8,6 +8,7 @@ const Users = ({ users }) => {
       {users ? (
         users.map((user) => (
           <a
+            key={user.id}
             rel="noreferrer"
             target="_blank"
             href={`https://github.com/${user.login}`}
