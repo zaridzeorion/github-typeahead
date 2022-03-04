@@ -5,7 +5,7 @@ import "../styles/users.css";
 const Users = ({ users }) => {
   return (
     <ul className="Users">
-      {users ? (
+      {users &&
         users.map((user) => (
           <a
             key={user.id}
@@ -21,15 +21,16 @@ const Users = ({ users }) => {
               </p>
             </li>
           </a>
-        ))
-      ) : (
+        ))}
+
+      {!users && (
         <li className="Empty-message">
           <Loader />
         </li>
       )}
 
       {users && users.length === 0 && (
-        <li className="Empty-message">User not found.</li>
+        <li className="Empty-message">Oops.. user not found</li>
       )}
     </ul>
   );
