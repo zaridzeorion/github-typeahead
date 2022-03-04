@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GET } from "../fetch";
+import GithubLogo from "../GitHub_Logo_White.png";
 import "../styles/typeahead.css";
 
 const GithubTypeahead = ({ setData, user_per_page = 5 }) => {
@@ -9,7 +10,8 @@ const GithubTypeahead = ({ setData, user_per_page = 5 }) => {
   useEffect(() => {
     // Debouncing - delaying function
     let timeoutId = setTimeout(() => {
-      GET(BASE_URL).then((res) => setData(res.items));
+      if (input.length > 0) GET(BASE_URL).then((res) => setData(res.items));
+      if (input === "") setData([]);
     }, 500);
 
     return () => {
@@ -19,13 +21,16 @@ const GithubTypeahead = ({ setData, user_per_page = 5 }) => {
   }, [input]);
 
   return (
-    <input
-      className="Typeahead-input"
-      type="text"
-      placeholder="Search..."
-      value={input}
-      onChange={(e) => setInput(e.target.value)}
-    />
+    <>
+      <img className="Github-logo" alt="github logo" src={GithubLogo} />
+      <input
+        className="Typeahead-input"
+        type="text"
+        placeholder="Search..."
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+    </>
   );
 };
 
