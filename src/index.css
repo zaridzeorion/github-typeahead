@@ -18,15 +18,16 @@ body {
   color: var(--light-color);
 }
 
+/* Making font size bigger for wider screens */
 @media only screen and (min-width: 1900px) {
   body {
-    font-size: 21px;
+    font-size: 23px;
   }
 }
 
 @media only screen and (min-width: 2500px) {
   body {
-    font-size: 23px;
+    font-size: 26px;
   }
 }
 
@@ -43,7 +44,7 @@ a {
   color: gray;
 }
 
-/* For error or "not found" messages */
+/* For error, loading or "not found" messages */
 .Empty-message {
   position: relative;
   padding: 10px;
@@ -52,4 +53,11 @@ a {
   margin-top: 5px;
   text-align: center;
   color: var(--light-color);
+}
+
+/* for wider screens */
+@media only screen and (min-width: 1900px) {
+  .Empty-message {
+    font-size: 20px;
+  }
 }

@@ -45,7 +45,22 @@
   border-radius: 5px;
 }
 
+/* for wider screens */
+@media only screen and (min-width: 1900px) {
+  .User img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .User .Username {
   min-height: 80px;
   padding-left: 80px;
+}
+
+/* for wider screens */
+@media only screen and (min-width: 1900px) {
+  .User .Username {
+    padding-left: 85px;
+  }
 }
