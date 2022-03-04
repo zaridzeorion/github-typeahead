@@ -1,3 +1,4 @@
+/* GLOBALS  */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,13 +20,13 @@ body {
 
 @media only screen and (min-width: 1900px) {
   body {
-    font-size: 20px;
+    font-size: 21px;
   }
 }
 
 @media only screen and (min-width: 2500px) {
   body {
-    font-size: 22px;
+    font-size: 23px;
   }
 }
 
@@ -38,6 +39,11 @@ a {
   text-decoration: none;
 }
 
+.asperand {
+  color: gray;
+}
+
+/* For error or "not found" messages */
 .Empty-message {
   position: relative;
   padding: 10px;
@@ -46,8 +52,4 @@ a {
   margin-top: 5px;
   text-align: center;
   color: var(--light-color);
-}
-
-.asperand {
-  color: gray;
 }

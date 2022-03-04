@@ -1,3 +1,4 @@
+/* .Users selector unites every user selection */
 .Users {
   width: 95%;
   position: absolute;
@@ -13,6 +14,7 @@
   display: none;
 }
 
+/* this is where showing users is handled */
 .Typeahead:focus-within > .Users {
   display: block;
 }

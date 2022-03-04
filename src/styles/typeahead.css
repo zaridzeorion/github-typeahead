@@ -12,10 +12,12 @@
   transition: 0.2s ease;
 }
 
+/* make typeahead wider whenever clicked: */
 .Typeahead:focus-within {
   width: 550px;
 }
 
+/* for smaller screens... */
 @media only screen and (max-width: 450px) {
   .Typeahead {
     width: 250px;
